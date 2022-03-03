@@ -1,0 +1,13 @@
+kafka:
+  bootstrap-servers: ${BOOTSTRAP_SERVER:pkc-4nym6.us-east-1.aws.confluent.cloud:9092}
+  key: 5ZGETTZCLAQ7HG2Z
+  secret: KEsaLPVP3tYcAwBARb9E+9BRjQjpOQyNf2LRQD3vXAr+uzs8P57CrV1zJxLvUWiQ
+  config:
+    path: ${ADMISSION_EVENT_KAFKA_CONFIG_PATH:/home/lenovo/Descargas/message-broker-producer/mensajeria-admision-event-service-confluent-kafka.qa.properties}
+  topic:
+    student-message: student-message
+
+server:
+  port: ${PORT:8080}
+  servlet:
+    context-path: /message-broker-producer/api
